@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.jokesdisplay.JokesDisplayActivity;
+import com.example.jokessupplier.Joke;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void tellJoke(View view) {
         Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra("JOKE", "DERP!!!!!!");
+        intent.putExtra("JOKE", Joke.getJoke());
         startActivity(intent);
     }
 
