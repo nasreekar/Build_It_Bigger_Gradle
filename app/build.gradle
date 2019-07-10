@@ -35,10 +35,10 @@ android {
     flavorDimensions "version"
     productFlavors {
         free {
-            applicationId "com.udacity.gradle.builditbigger.free"
+            dimension "version"
         }
         paid {
-            applicationId "com.udacity.gradle.builditbigger.paid"
+            dimension "version"
         }
     }
 }
@@ -57,6 +57,6 @@ dependencies {
     })
 
     testImplementation 'junit:junit:4.12'
-    compile project(path: ':jokesdisplay')
-    compile project(path: ':jokesSupplier')
+    implementation project(path: ':jokesdisplay')
+    implementation project(path: ':jokesSupplier')
 }
