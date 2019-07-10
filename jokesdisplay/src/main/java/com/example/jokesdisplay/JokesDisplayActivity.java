@@ -1,5 +1,6 @@
 package com.example.jokesdisplay;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -19,6 +20,6 @@ public class JokesDisplayActivity extends AppCompatActivity {
     }
 
     private void displayJoke() {
-        joke.setText(getIntent().getStringExtra("JOKE"));
+        joke.setText(getIntent().getStringExtra(Intent.EXTRA_TEXT));
     }
 }
