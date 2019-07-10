@@ -44,11 +44,6 @@ android {
             manifestPlaceholders = [appLabel: "Paid BuildItBigger"]
         }
     }
-
-    sourceSets {
-        main.java.srcDirs += 'src/free/java'
-        main.java.srcDirs += 'src/paid/java'
-    }
 }
 
 dependencies {
