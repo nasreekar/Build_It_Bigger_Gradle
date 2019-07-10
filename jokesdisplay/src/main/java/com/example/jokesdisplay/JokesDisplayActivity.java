@@ -13,9 +13,7 @@ public class JokesDisplayActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jokes_display);
-
         joke = findViewById(R.id.tv_joke);
-
         displayJoke();
     }
 

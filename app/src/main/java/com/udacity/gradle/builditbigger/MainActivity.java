@@ -1,16 +1,12 @@
 package com.udacity.gradle.builditbigger;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-
-import com.example.jokesdisplay.JokesDisplayActivity;
 
 
-public class MainActivity extends AppCompatActivity implements EndPointAsyncTask.Callback {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,20 +35,5 @@ public class MainActivity extends AppCompatActivity implements EndPointAsyncTask
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void tellJoke(View view) {
-       /* Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra(Intent.EXTRA_TEXT, new Joke().getJoke());
-        startActivity(intent);*/
-
-        new EndPointAsyncTask(this).execute();
-    }
-
-    @Override
-    public void onFinished(String result) {
-        Intent intent = new Intent(this, JokesDisplayActivity.class);
-        intent.putExtra(Intent.EXTRA_TEXT, result);
-        startActivity(intent);
     }
 }
