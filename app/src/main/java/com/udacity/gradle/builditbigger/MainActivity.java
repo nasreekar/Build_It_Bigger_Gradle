@@ -10,7 +10,7 @@ import android.view.View;
 import com.example.jokesdisplay.JokesDisplayActivity;
 
 
-public class MainActivity extends AppCompatActivity implements EndpointAsyncTask.Callback {
+public class MainActivity extends AppCompatActivity implements EndPointAsyncTask.Callback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements EndpointAsyncTask
         intent.putExtra(Intent.EXTRA_TEXT, new Joke().getJoke());
         startActivity(intent);*/
 
-        new EndpointAsyncTask(this).execute();
+        new EndPointAsyncTask(this).execute();
     }
 
     @Override

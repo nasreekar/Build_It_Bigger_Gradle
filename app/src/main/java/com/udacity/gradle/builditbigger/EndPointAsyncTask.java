@@ -10,7 +10,7 @@ import com.udacity.gradle.builditbigger.backend.myApi.MyApi;
 
 import java.io.IOException;
 
-class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
+class EndPointAsyncTask extends AsyncTask<Void, Void, String> {
 
     private static MyApi myApiService = null;
 
@@ -20,7 +20,7 @@ class EndpointAsyncTask extends AsyncTask<Void, Void, String> {
         void onFinished(String result);
     }
 
-    public EndpointAsyncTask(Callback callback) {
+    public EndPointAsyncTask(Callback callback) {
         this.callback = callback;
     }
 

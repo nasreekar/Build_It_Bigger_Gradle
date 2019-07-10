@@ -32,14 +32,22 @@ android {
         }
     }
 
-    flavorDimensions "version"
+    flavorDimensions "default"
     productFlavors {
-        free {
-            dimension "version"
+        free{
+            applicationId "com.udacity.gradle.builditbigger.free"
+            manifestPlaceholders = [appLabel: "Free BuildItBigger"]
         }
-        paid {
-            dimension "version"
+
+        paid{
+            applicationId "com.udacity.gradle.builditbigger.paid"
+            manifestPlaceholders = [appLabel: "Paid BuildItBigger"]
         }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/free/java'
+        main.java.srcDirs += 'src/paid/java'
     }
 }
 
