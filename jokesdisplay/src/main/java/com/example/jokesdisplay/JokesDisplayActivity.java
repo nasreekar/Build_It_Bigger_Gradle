@@ -21,7 +21,7 @@ public class JokesDisplayActivity extends AppCompatActivity {
     private void displayJoke() {
         Intent intent = getIntent();
         if (intent.hasExtra(Intent.EXTRA_TEXT)) {
-            joke.setText(Intent.EXTRA_TEXT);
+            joke.setText(getIntent().getStringExtra(Intent.EXTRA_TEXT));
         } else {
             Toast.makeText(this, getString(R.string.emptyJokePlaceholder), Toast.LENGTH_SHORT).show();
         }
