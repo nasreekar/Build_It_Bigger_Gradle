@@ -2,6 +2,7 @@ package com.udacity.gradle.builditbigger;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
+import android.text.TextUtils;
 
 import java.util.concurrent.ExecutionException;
 
@@ -12,7 +13,7 @@ public class EndPointAsyncTaskUnitTest extends ApplicationTestCase<Application> 
     }
 
     public void testGetJokeTask() throws ExecutionException, InterruptedException {
-        EndpointAsyncTask testJoke = new EndpointAsyncTask(new EndpointAsyncTask.Callback() {
+        EndPointAsyncTask testJoke = new EndPointAsyncTask(new EndPointAsyncTask.Callback() {
             @Override
             public void onFinished(String result) {
 
@@ -21,6 +22,7 @@ public class EndPointAsyncTaskUnitTest extends ApplicationTestCase<Application> 
         testJoke.execute();
         String joke = testJoke.get();
         assertNotNull(joke);
+        assertFalse(TextUtils.isEmpty(joke));
     }
 }
 
